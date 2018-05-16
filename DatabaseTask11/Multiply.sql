@@ -1,6 +1,9 @@
-﻿CREATE PROCEDURE [dbo].[Multiply]
-	@param1 int = 0,
-	@param2 int
+﻿create procedure multiply(@number1 INT,@number2 INT)
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN
+
+DECLARE @result INT
+SET @result=@number1*@number2
+SELECT @result
+
+end

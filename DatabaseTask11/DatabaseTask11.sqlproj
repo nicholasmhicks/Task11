@@ -63,6 +63,7 @@
     <Build Include="Log.sql" />
     <Build Include="Multiply.sql" />
     <Build Include="Add.sql" />
+    <Build Include="AnonymousBlock.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
