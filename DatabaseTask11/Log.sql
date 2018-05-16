@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Log]
+(
+	[OrigAcct] INT NOT NULL,
+	[LogDateTime] DATETIME NOT NULL,
+	[RecAcct] INT,
+	[Amount] MONEY NOT NULL,
+	CONSTRAINT FK_1 FOREIGN KEY (OrigAcct) REFERENCES Account(AcctNo),
+	CONSTRAINT FK_2 FOREIGN KEY (RecAcct) REFERENCES Account(AcctNo),
+	CONSTRAINT PK PRIMARY KEY (OrigAcct, LogDateTime)
+)
