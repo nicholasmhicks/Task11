@@ -4,6 +4,6 @@ BEGIN
 
 DECLARE @result INT
 SET @result=@number1*@number2
-SELECT @result
+SELECT CONCAT('The product of ', @number1, ' and ', @number2, ' is ', @result)
 
 end

@@ -1,9 +1,4 @@
-﻿CREATE PROCEDURE AccountTransaction
-(
-     @FromAccount INT
-    , @ToAccount INT
-    , @Amount MONEY
-)
+﻿CREATE PROCEDURE AccountTransaction (@FromAccount INT, @ToAccount INT, @Amount MONEY)
 AS
 BEGIN
     BEGIN TRANSACTION;
@@ -18,19 +13,9 @@ BEGIN
 	WHERE (AcctNo = @ToAccount);
 
 	INSERT INTO [dbo].[Log]
-	(
-	[OrigAcct]
-	,[LogDateTime]
-	,[RecAcct]
-	,[Amount]
-	)
+	([OrigAcct],[LogDateTime],[RecAcct],[Amount])
 
-	VALUES	(
-	@FromAccount
-	,GETDATE()
-	,@ToAccount
-	,@Amount
-	);
+	VALUES	(@FromAccount,GETDATE(),@ToAccount,@Amount);
 
     END TRY
 
