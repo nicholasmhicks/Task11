@@ -61,6 +61,8 @@
   <ItemGroup>
     <Build Include="Account.sql" />
     <Build Include="Log.sql" />
+    <Build Include="Multiply.sql" />
+    <Build Include="Add.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
@@ -70,5 +72,8 @@
       <DefaultValue>True</DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>
     </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Transaction.sql" />
   </ItemGroup>
 </Project>

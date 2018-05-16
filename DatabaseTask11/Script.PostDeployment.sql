@@ -11,9 +11,6 @@ Post-Deployment Script Template
 */
 
 
-
-
-
 IF '$(LoadTestData)' = 'true'
 
 BEGIN
