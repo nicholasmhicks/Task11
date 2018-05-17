@@ -5,6 +5,6 @@ BEGIN
 DECLARE @result INT
 SET @result=@number1+@number2
 
-RETURN result
+RETURN @result
 
 END
